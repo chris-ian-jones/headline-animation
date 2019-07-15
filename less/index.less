@@ -110,30 +110,56 @@ body {
   font-family: "IBM Plex Mono", monospace;
 }
 
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.main-container {
+  background-color: #232840;
   width: 100vw;
   height: 100vh;
-  background-color: #232840;
 }
+.text-container,
+.shapes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 75%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.text-container {
+  position: absolute;
+  z-index: 1;
+}
+
+.shapes-container {
+  position: absolute;
+  z-index: 0;
+}
+
+// .shapes-container {
+//   position: relative;
+//   // y: -100vh;
+//   z-index: -1;
+
+// }
 
 .chris-container,
 .jones-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .chris,
 .jones {
   color: #f649a7;
   font-size: 12rem;
-  width: 115.203px;
+  width: 250px;
   height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .letter-c,
@@ -151,4 +177,14 @@ body {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 40 40" xml:space="preserve" height="8px" width="8px"><g ><circle r="12" cx="12" cy="12" fill="%23EC2F95"/></g></svg>');
   color: transparent;
   -webkit-background-clip: text;
+}
+
+.circle {
+  border: 10px dashed #3c51d1;
+  border-radius: 50%;
+}
+
+.square {
+  border: 10px solid #3c51d1;
+  box-shadow: 10px 10px 0 0px #99c5c8;
 }
