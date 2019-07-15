@@ -12,6 +12,9 @@ const letterSJones = document.querySelector(".letter-s.jones");
 
 const circleR = document.querySelector(".letter-r.chris.circle");
 const squareS = document.querySelector(".square");
+const blobOne = document.querySelector(".blob-one");
+const blobTwo = document.querySelector(".blob-two");
+const blobThree = document.querySelector(".blob-three");
 
 TweenLite.from(letterC, 0.75, {
   ease: Expo.easeOut,
@@ -80,4 +83,20 @@ TweenLite.from(squareS, 1.5, {
   y: "440px",
   rotation: 180,
   delay: 2.2
+});
+
+TweenLite.from(blobOne, 0.25, {
+  height: 0,
+  delay: 2.4
+});
+
+TweenLite.from(blobThree, 0.25, {
+  height: "0px",
+  delay: 2.5
+});
+
+TweenLite.from(blobTwo, 0.75, {
+  ease: Back.easeOut,
+  height: "0px",
+  delay: 2.6
 });
